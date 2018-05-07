@@ -1,12 +1,12 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import { autoRehydrate, persistStore } from 'redux-persist';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducer from './';
 
 const enhance = compose(
-    applyMiddleware(thunk),
+    applyMiddleware(logger),
     composeWithDevTools(autoRehydrate()),
 );
 

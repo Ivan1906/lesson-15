@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-export const Touchable = ({ count, onPress }) => {
+export const Touchable = ({ count, increment, decrement }) => {
     <View style={styles.container}>
         <Text style={styles.countField}>{count}</Text>
-        <TouchableOpacity style={styles.botton} onPress={onPress}>
+        <TouchableOpacity style={styles.botton} onPress={increment}>
             <Text style={styles.buttonText}>INCREMENT</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.botton} onPress={decrement}>
+            <Text style={styles.buttonText}>DECREMENT</Text>
         </TouchableOpacity>
     </View>
 };
